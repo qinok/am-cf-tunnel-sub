@@ -135,8 +135,7 @@ export async function mainHandler({ req, url, headers, res, env }) {
     }
 
     hostRemark = url.searchParams.get('HOST_REMARK') || getEnvVar('HOST_REMARK', env) || HOST_REMARK || hostRemark;
-    //let protType = url.searchParams.get('PROT_TYPE') || getEnvVar('PROT_TYPE', env) || PROT_TYPE;
-    let protType= 'vless';
+    let protType = url.searchParams.get('PROT_TYPE') || getEnvVar('PROT_TYPE', env) || PROT_TYPE;
     if (protType) protType = protType.toLowerCase();
 
     subConfig = getEnvVar('SUB_CONFIG', env) || SUB_CONFIG || subConfig;
